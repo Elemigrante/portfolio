@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :portfolios # from resource generator
+  # resource generator created 'resources :portfolios', but we override it for our purposes.
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   
   # get 'any string', to: 'controller#action'
   get 'about-me', to: 'pages#about'
