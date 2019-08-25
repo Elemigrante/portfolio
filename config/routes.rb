@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show]
   # custom route name
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  get 'angular-items', to: 'portfolios#angular'
   
   # get 'any string', to: 'controller#action', hard coded route
   get 'about-me', to: 'pages#about'
