@@ -1,6 +1,8 @@
 class Portfolio < ApplicationRecord
-  has_many :technologies
   include Placeholder
+  has_many :technologies
+  accepts_nested_attributes_for :technologies,
+                                reject_if: lambda { |attrs| attrs['name'].blank? }
   
   validates :title, :body, :main_image, :thumb_image, presence: true
   # two best practice to create custom scopes to call in controller
@@ -8,6 +10,7 @@ class Portfolio < ApplicationRecord
   def self.angular
     where(subtitle: 'Angular')
   end
+  
   # 2.
   scope :r_o_r_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
   
@@ -15,7 +18,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
   
   def set_defaults
-    self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
+    self.main_image  ||= Placeholder.image_generator(height: '600', width: '400')
     self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 end
