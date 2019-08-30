@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # resource generator created 'resources :portfolios', but we override it for our purposes.
   resources :portfolios, except: [:show]
   # custom route name
