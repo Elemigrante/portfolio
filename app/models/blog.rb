@@ -5,5 +5,5 @@ class Blog < ApplicationRecord
   
   validates :title, :body, presence: true
   
-  belongs_to :topic
+  belongs_to :topic, optional: true
 end
