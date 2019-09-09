@@ -16,4 +16,8 @@ module ApplicationHelper
       content_tag(:p, greeting,class: "source-greeting")
     end
   end
+  
+  def copyright_generator
+    @copyright = NeladnovViewTool::Renderer.copyright 'Dmitry Neladnov', 'All rights reserved'
+  end
 end
