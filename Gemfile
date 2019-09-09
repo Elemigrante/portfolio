@@ -63,3 +63,6 @@ gem 'devise', '~> 4.7'
 
 # This replaces the default console with Pry, in addition to loading the Rails console helpers and adding some useful Rails-specific commands.
 gem 'pry-rails', :group => :development
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
