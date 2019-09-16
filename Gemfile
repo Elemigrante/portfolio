@@ -67,3 +67,4 @@ gem 'pry-rails', :group => :development
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'neladnov_view_tool', git: 'https://github.com/Elemigrante/neladnov_view_tool'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
