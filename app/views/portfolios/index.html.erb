@@ -1,6 +1,8 @@
-<!--Create index from scratch via resources-->
-<h1>Portfolio Items</h1>
-
-<%= link_to "Create new item", new_portfolio_url if logged_in?(:site_admin) %>
-<!--manually declared partial-->
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <!--manually declared partial-->
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>
