@@ -7,6 +7,10 @@ class Portfolio < ApplicationRecord
   validates :title, :body, :main_image, :thumb_image, presence: true
   # two best practice to create custom scopes to call in controller
   # 1.
+  
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+  
   def self.angular
     where(subtitle: 'Angular')
   end
