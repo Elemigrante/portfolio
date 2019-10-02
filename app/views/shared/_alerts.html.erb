@@ -1,8 +1,0 @@
-<%= js extend_gritter :position => :top_left, :fade_in_speed => "fast", :time => 2000 %>
-<% if flash[:alerts] %>
-  <%= js add_gritter(flash[:alert]) %>
-<% elsif flash[:error] %>
-  <%= js add_gritter(flash[:error]) %>
-<% else %>
-  <%= js add_gritter(flash[:notice]) %>
-<% end %>
