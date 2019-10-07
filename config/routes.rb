@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     end
   end
   
+  mount ActionCable.server => '/cable'
+  
   # Root path to home(view) page on localhost:3000 instead rails standard template.
   # root to: 'controller#action', localhost:3000 now shows pages#home instead rails standard template.
   root to: 'pages#home'
