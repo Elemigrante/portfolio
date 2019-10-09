@@ -177,3 +177,27 @@ h6, .h6 {
 .social-links li {
   font-size: 1.5em;
 }
+
+.comment-card > .card {
+  margin-top: 15px;
+  padding: auto;
+}
+
+.comment-gravatar {
+  padding: 15px 0 0 15px;
+}
+
+.comment-content {
+  text-align: justify;
+  padding: 15px 15px 5px 15px;
+}
+
+.comment-attribution {
+  padding: 0 0 15px 15px;
+  font-size: .8em;
+  font-style: italic;
+}
+
+.comment-author {
+  font-weight: 700;
+}
