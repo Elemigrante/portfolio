@@ -13,6 +13,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
@@ -81,6 +83,6 @@ class BlogsController < ApplicationController
   
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :status)
   end
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   # resource generator created 'resources :portfolios', but we override it for our purposes.
   resources :portfolios, except: [:show] do
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
+  
+  mount ActionCable.server => '/cable'
   
   # Root path to home(view) page on localhost:3000 instead rails standard template.
   # root to: 'controller#action', localhost:3000 now shows pages#home instead rails standard template.
