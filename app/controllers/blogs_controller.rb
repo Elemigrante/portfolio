@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  before_action :set_sidebar_topics, except: [:update, :create, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:create, :destroy, :toggle_status]
   layout "blog"
   access all: [:show, :index], user: { except: [:destroy, :new, :create, :update, :edit, :toggle_status] }, site_admin: :all
   
@@ -49,7 +49,6 @@ class BlogsController < ApplicationController
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
-      
       end
     end
   end
@@ -80,6 +79,6 @@ class BlogsController < ApplicationController
   
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title, :body, :status, :topic_id)
+    params.require(:blog).permit(:title, :body, :status, :topic_id, :status)
   end
 end
