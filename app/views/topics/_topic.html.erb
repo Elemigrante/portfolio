@@ -1,3 +1,4 @@
-<div>
+<div class="breadcrumb">
   <%= link_to topic.title, topic_path(topic) %>
+  <%= link_to fa_icon('trash'), topic_path(topic), method: :delete, data: { confirm: 'Are you sure? You want to delete this topic.' }, class: 'ml-auto' if logged_in?(:site_admin) %>
 </div>
