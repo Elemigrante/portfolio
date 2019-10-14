@@ -9,7 +9,7 @@ module BlogsHelper
     end
   end
   
-  def markdown(text)
+  def markdown text
     coderrayified = CodeRayify.new(filter_html: true, hard_wrap: true)
     
     options = {
@@ -21,5 +21,9 @@ module BlogsHelper
     
     markdown_to_html = Redcarpet::Markdown.new(coderrayified, options)
     markdown_to_html.render(text).html_safe
+  end
+  
+  def blog_status_color blog
+    'color:red' if blog.draft?
   end
 end
