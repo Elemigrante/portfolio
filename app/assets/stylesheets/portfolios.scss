@@ -2,6 +2,12 @@
 @import "jquery-ui";
 @import "gritter";
 
+a,
+a:focus,
+a:hover {
+  color: #32b9ff;
+}
+
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;

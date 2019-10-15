@@ -161,3 +161,21 @@ body {
 .app-footer {
   color: white;
 }
+
+.app-card-container {
+  color: black;
+  text-align: justify;
+}
+
+.app-card-container > .card {
+  padding: 30px;
+  background-color: rgba(180, 179, 178, 0.75);
+}
+
+.app-card-container a {
+  color: black;
+}
+
+.profile-img {
+  border: 1px solid black;
+}
