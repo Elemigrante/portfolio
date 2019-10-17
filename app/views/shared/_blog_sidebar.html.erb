@@ -1,7 +1,7 @@
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
   <div class="sidebar-module sidebar-module-inset">
-    <h4>About</h4>
-    <p>Posts about Ruby & Rails</p>
+    <h4>About Me</h4>
+    <p>Teaching programming and new technologies is my passion and my best ally in excellence.</p>
   </div>
 
   <%= source_helper("alert alert-info blog-sidebar-source") %>
@@ -15,10 +15,18 @@
 
   <div class="sidebar-module">
     <h4>Elsewhere</h4>
-    <ol class="list-unstyled social-links">
-      <li><a href="https://github.com/Elemigrante"><%= fa_icon "github" %></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=1500473517"><%= fa_icon "facebook" %></a></li>
-      <li><a href="https://vk.com/id11170536"><%= fa_icon "vk" %></a></li>
-    </ol>
+    <div class="blog-social-links">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="https://github.com/Elemigrante"><%= fa_icon "github" %></a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://www.facebook.com/profile.php?id=1500473517"><%= fa_icon "facebook" %></a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://vk.com/id11170536"><%= fa_icon "vk" %></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

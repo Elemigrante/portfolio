@@ -31,111 +31,13 @@
         <p>I am always learning and am always on the lookout for new technologies that catch my interest, truly excited
           about the opportunities that lay ahead of me in
           this field and I cannot wait to see what I will build next as web developer.</p>
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-              <button class="btn btn-primary btn-block"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#jobHistory"
-                      aria-expanded="false"
-                      aria-controler="jobHistory"
-              >
-                Job History
-              </button>
-            </p>
 
-            <div class="collapse" id="jobHistory">
-              <div class="card card-block">
-                <span>"Red October", Heavy engineering, St. Petersburg, 2013 - 2017.
-                <br> Position: engineer-constructor</span>
-              </div>
-              <div class="card card-block">
-                <span>"Garant mechanization", St. Petersburg, 2017 - 2018. <br> Position: CNC machine operator</span>
-              </div>
-            </div>
-          </div>
+        <%= render 'about_buttons' %>
+        <%= render 'about_job_history' %>
+        <%= render 'about_education' %>
+        <%= render 'about_courses' %>
+        <%= render 'about_experience' %>
 
-          <div class="col-md-12">
-            <p>
-              <button class="btn btn-primary btn-block"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#education"
-                      aria-expanded="false"
-                      aria-controler="education"
-              >
-                Education
-              </button>
-            </p>
-
-            <div class="collapse" id="education">
-              <div class="card card-block">
-                <span>St. Petersburg state Polytechnic University, St. Petersburg, 2013</span>
-              </div>
-              <div class="card card-block">
-                Shcheglovskaya high school, Shcheglovo village, 2007
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12">
-            <p>
-              <button class="btn btn-primary btn-block"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#courses"
-                      aria-expanded="false"
-                      aria-controler="courses"
-              >Curses
-              </button>
-            </p>
-
-            <div class="collapse" id="courses">
-              <div class="card card-block">
-                <span>An intensive training course for Ruby on Rails/Ruby, 2018 - 2019 <br> by <em>GoodProgrammer.ru</em></span>
-              </div>
-              <div class="card card-block">
-                <span>Dissecting Ruby on Rails 5 - Become a Professional Developer, <br> by <em>Jordan Hudgens</em> on Udemy.com, 2019</span>
-              </div>
-
-              <div class="card card-block">
-                <span>Interactive course on Html, CSS, Javascript <br> by
-                <em>HTMLAcademy.ru</em></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12">
-            <p>
-              <button class="btn btn-primary btn-block"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#experience"
-                      aria-expanded="false"
-                      aria-controler="experience"
-              >
-                Experience
-              </button>
-            </p>
-
-            <div class="collapse" id="experience">
-              <div class="card card-block">
-                <ul>I have practical experience:
-                  <li>- creating Web applications in Ruby, using Ruby on Rails 4/5</li>
-                  <li>- working with tables in PostgreSQL</li>
-                  <li>- work with * nix-systems at the user level</li>
-                  <li>- with client-side data presentation technologies (HTML5, CSS3, JavaScript)</li>
-                  <li>- with version control systems</li>
-                  <li>- development via TDD and BDD</li>
-                  <li>- writing modular, functional and integration tests using RSpec, Cucumber, Capybara, FactoryBot
-                    (formerly FactoryGirl).
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
