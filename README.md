@@ -87,7 +87,22 @@ heroku config:set S3_BUCKET_NAME=bucket-name
 git push heroku master
  ```
 
-### Problem solving with Devise.secret key error
+8: Need provide DB migration for heroku
+```
+heroku run rake db:migrate
+```
+
+9: Restart heroku
+```
+heroku restart
+```
+
+10: Open heroku app
+```
+heroku open
+```
+
+#### Problem solving with Devise.secret key error
 
 1: Go to `application.rb` file and put line `config.secret_key_base = ENV["SECRET_KEY_BASE"]`
 ```ruby
@@ -108,7 +123,7 @@ rails secret
 ```
 and then copy and paste in the SECRET_KEY_BASE= after equal sign
 ```
-heroku config:set SECRET_KEY_BASE=herу
+heroku config:set SECRET_KEY_BASE=here
 ```
 
 3: Just in case, it’s better to create `Procfile` in the root directory and add lines to it
@@ -117,7 +132,7 @@ web: bundle exec rails server -p $PORT
 worker:  bundle exec rake jobs:work
 ```
 
-4: Commit changes and push to your repository by following commands
+4: Commit changes in master branch and push to your repository by following commands
 ```
 git satus
 
@@ -125,10 +140,28 @@ git add .
 
 git commit -m ' '
 
-git push
+git push or git push origin master
 ```
 
 5: Push on heroku
 ```
+git push heroku master
+```
+
+#### Solving errors with Bundler version
+
+1: Sometimes you need to delete `Gemfile.lock` and update gems on your machine `gem update`. If you need additional help use `bundle -h` in terminal.
+
+2: Update bundle locally
+```
+bundle update
+```
+
+3: Commit your changes and push to heroku
+```
+git add Gemfile.lock
+
+git commit -m 'Update Gemfile.lock for Heroku'
+
 git push heroku master
 ```
