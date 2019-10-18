@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,6 +9,8 @@
 
   <meta name="keywords" content="<%= @seo_keywords %>"/>
 
+  <%= favicon_link_tag 'favicons/favicon.ico' %>
+
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
@@ -17,13 +19,14 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
   <%= video_tag(
-      'network.mp4',
-      id: 'background',
-      autoplay: true,
-      loop: true,
-      muted: true,
-      poster: 'Network_img.jpg'
-      ) %>
+          'network.mp4',
+          id:       'background',
+          autoplay: true,
+          loop:     true,
+          muted:    true,
+          poster:   'Network_img.jpg'
+      )
+  %>
 
   <%= render "shared/application_nav" %>
 
@@ -33,7 +36,6 @@
 
   <%= alerts %>
 
-  <%= source_helper("application") %>
 </div>
 </body>
 </html>

@@ -1,6 +1,26 @@
 @import "bootstrap";
 @import "jquery-ui";
 @import "gritter";
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab&display=swap');
+
+a,
+a:focus,
+a:hover {
+  color: #32b9ff;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
+}
 
 .jumbotron {
   padding-top: 3rem;
@@ -8,6 +28,7 @@
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
@@ -44,4 +65,15 @@ footer p {
 
 .portfolio-btn {
   padding-top: 20px;
+}
+
+.card {
+  float: left;
+  width: 100%;
+  padding: .55rem;
+  border: 0;
+}
+
+.card-text {
+  text-align: center;
 }

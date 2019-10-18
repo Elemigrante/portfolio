@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,6 +9,8 @@
   <%= csp_meta_tag %>
 
   <meta name="keywords" content="<%= @seo_keywords %>"/>
+
+  <%= favicon_link_tag 'favicons/favicon.ico' %>
 
   <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -32,6 +34,5 @@
 
 <%= alerts %>
 
-<%= source_helper("blog") %>
 </body>
 </html>
