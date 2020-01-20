@@ -11,7 +11,7 @@ class PortfoliosController < ApplicationController
     params[:order].each do |key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
     end
-    #The head method to respond with empty response body(view).
+    
     head :ok
   end
   
@@ -52,10 +52,8 @@ class PortfoliosController < ApplicationController
   end
   
   def destroy
-    # Destroy/delete the record
     @portfolio_item.destroy
     
-    # Redirect
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Record was successfully destroyed.' }
     end

@@ -27,7 +27,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# This replaces the default console with Pry, in addition to loading the Rails console helpers and adding some useful Rails-specific commands.
 gem 'pry-rails', :group => :development
 gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7'
