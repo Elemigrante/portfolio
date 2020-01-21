@@ -4,13 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.0'
 
 gem 'rails', '~> 5.2.3'
-<<<<<<< HEAD
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12.2'
-=======
-gem 'pg'
-gem 'puma', '~> 3.11'
->>>>>>> 04138b4333e10edebb732ada043be7666bfbd410
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
