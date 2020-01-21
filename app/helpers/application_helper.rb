@@ -9,7 +9,6 @@ module ApplicationHelper
     end
   end
   
-  # helper method with content_tag
   def source_helper(styles)
     if session[:source]
       greeting = "Thanks for visiting me from #{session[:source]}, please feel free to  #{link_to 'contact_me', contact_path} if you'd like to work together."

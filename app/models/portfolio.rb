@@ -5,8 +5,6 @@ class Portfolio < ApplicationRecord
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
   
   validates :title, :body, presence: true
-  # two best practice to create custom scopes to call in controller
-  # 1.
   
   mount_uploader :thumb_image, PortfolioUploader
   mount_uploader :main_image, PortfolioUploader
@@ -19,6 +17,5 @@ class Portfolio < ApplicationRecord
     order("position ASC")
   end
   
-  # 2.
   scope :r_o_r_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 end

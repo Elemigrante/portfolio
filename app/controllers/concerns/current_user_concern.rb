@@ -1,7 +1,6 @@
 module CurrentUserConcern
   extend ActiveSupport::Concern
   
-  # Implement the null oject pattern.
   def current_user
     super || guest_user
   end
